@@ -36,3 +36,4 @@ module.exports = class MiddlewareTrailpack extends Trailpack {
 }
 
 module.exports.Graphql = require("graphql")
+module.exports.Schema = lib.Schema
