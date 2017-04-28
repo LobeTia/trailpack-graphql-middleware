@@ -1,0 +1,45 @@
+{
+  "name": "trailpack-graphql-middleware",
+  "version": "0.0.0",
+  "description": "Add graphql to a Trail app",
+  "homepage": "http://trailsjs.io",
+  "author": {
+    "name": "Lobertini Mattia",
+    "email": "lobetia@gmail.com",
+    "url": "http://subluminar.com"
+  },
+  "main": "index.js",
+  "keywords": [
+    "GraphQL",
+    "Trail",
+    "Trailpack",
+    "trailpack",
+    "trails",
+    "trailjs"
+  ],
+  "dependencies": {
+    "body-parser": "1.17.1",
+    "graphql": "0.9.0",
+    "graphql-server-express": "0.7.2",
+    "lodash": "4.17.4",
+    "trailpack": "2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-trails": "3.0.0",
+    "mocha": "3.3.0",
+    "smokesignals": "2.1.0",
+    "trails": "2.0.2"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "https://github.com/LobeTia/trailpack-graphql-middleware.git",
+  "license": "MIT"
+}
