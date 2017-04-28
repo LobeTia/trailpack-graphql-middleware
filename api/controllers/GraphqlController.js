@@ -2,12 +2,25 @@
 
 const Controller = require('trails-controller')
 const bodyParser = require('body-parser')
+const {
+  graphiqlExpress
+} = require('graphql-server-express')
 
 /**
  * @module GraphqlController
  * @description Generated Trails.js Controller.
  */
 module.exports = class GraphqlController extends Controller {
+  gui(req, res) {
+    if (this.app.config.graphql.graphiql) {
+      graphiqlExpress({
+        endpointURL: "/graphql"
+      })(req, res)
+    }else{
+      res.status(404).send()
+    }
+  }
+
   callback(req, res, next) {
     this.parseRequest(req)
       .then(() => {

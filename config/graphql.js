@@ -1,5 +1,6 @@
 'use strict'
 
 module.exports = {
-  prefix: ""
+  prefix: "",
+  graphiql: true
 }
