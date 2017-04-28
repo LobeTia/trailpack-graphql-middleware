@@ -2,7 +2,6 @@
 
 const Trailpack = require('trailpack')
 const lib = require('./lib')
-const _ =require("lodash")
 
 module.exports = class MiddlewareTrailpack extends Trailpack {
   /**
@@ -23,7 +22,8 @@ module.exports = class MiddlewareTrailpack extends Trailpack {
    * TODO document method
    */
   initialize() {
-    this.app.services.GraphqlServerService.init(this.app.api.graphql.Schema)
+    let schema = new this.app.api.graphql.Schema(this.app)
+    this.app.services.GraphqlServerService.init(schema.instance())
   }
 
   constructor(app) {
