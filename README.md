@@ -1,4 +1,4 @@
-# trailpack-graphql-middleware
+# trailpack-graphql-server
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
@@ -14,8 +14,8 @@ Add Graphql server to a Trail app
 ## Install
 
 ```sh
-$ npm install --save trailpack-graphql-middleware
-$ yo trails:trailpack trailpack-graphql-middleware
+$ npm install --save trailpack-graphql-server
+$ yo trails:trailpack trailpack-graphql-server
 ```
 
 ## Configure
@@ -25,17 +25,17 @@ $ yo trails:trailpack trailpack-graphql-middleware
 module.exports = {
   packs: [
     // ... other trailpacks
-    require('trailpack-graphql-middleware')
+    require('trailpack-graphql-server')
   ]
 }
 ```
 
-[npm-image]: https://img.shields.io/npm/v/trailpack-graphql-middleware.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/trailpack-graphql-middleware
-[ci-image]: https://img.shields.io/travis//trailpack-graphql-middleware/master.svg?style=flat-square
-[ci-url]: https://travis-ci.org//trailpack-graphql-middleware
-[daviddm-image]: http://img.shields.io/david//trailpack-graphql-middleware.svg?style=flat-square
-[daviddm-url]: https://david-dm.org//trailpack-graphql-middleware
-[codeclimate-image]: https://img.shields.io/codeclimate/github//trailpack-graphql-middleware.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github//trailpack-graphql-middleware
+[npm-image]: https://img.shields.io/npm/v/trailpack-graphql-server.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/trailpack-graphql-server
+[ci-image]: https://img.shields.io/travis//trailpack-graphql-server/master.svg?style=flat-square
+[ci-url]: https://travis-ci.org//trailpack-graphql-server
+[daviddm-image]: http://img.shields.io/david//trailpack-graphql-server.svg?style=flat-square
+[daviddm-url]: https://david-dm.org//trailpack-graphql-server
+[codeclimate-image]: https://img.shields.io/codeclimate/github//trailpack-graphql-server.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github//trailpack-graphql-server
 

@@ -14,23 +14,23 @@ module.exports = class GraphqlController extends Controller {
   gui(req, res) {
     if (this.app.config.graphql.graphiql) {
       graphiqlExpress({
-        endpointURL: "/graphql"
+        endpointURL: '/graphql'
       })(req, res)
-    }else{
+    }
+    else {
       res.status(404).send()
     }
   }
 
   callback(req, res, next) {
-    this.parseRequest(req)
+    this.parseIncomingRequest(req)
       .then(() => {
         this.app.services.GraphqlServerService.getInstance()(req, res)
       })
   }
 
-  parseRequest(req) {
-    let promise = Promise.resolve()
-    promise = this.parseText(req)
+  parseIncomingRequest(req) {
+    const promise = this.bodyParse(req)
 
     promise.then(() => {
       if (req.is('application/graphql')) {
@@ -42,12 +42,13 @@ module.exports = class GraphqlController extends Controller {
     })
     return promise
   }
-  parseText(req) {
+
+  bodyParse(req) {
     return new Promise((resolve, reject) => {
       bodyParser.text({
         type: 'application/graphql'
       })(req, null, (error) => {
-        (error) ? reject(error): resolve()
+        (error) ? reject(error) : resolve()
       })
     })
   }

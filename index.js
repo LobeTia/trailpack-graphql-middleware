@@ -22,7 +22,7 @@ module.exports = class MiddlewareTrailpack extends Trailpack {
    * TODO document method
    */
   initialize() {
-    let schema = new this.app.api.graphql.Schema(this.app)
+    const schema = new this.app.api.graphql.Schema(this.app)
     this.app.services.GraphqlServerService.init(schema.instance())
   }
 
@@ -35,5 +35,5 @@ module.exports = class MiddlewareTrailpack extends Trailpack {
   }
 }
 
-module.exports.Graphql = require("graphql")
+module.exports.Graphql = require('graphql')
 module.exports.Schema = lib.Schema

@@ -1,5 +1,5 @@
 {
-  "name": "trailpack-graphql-middleware",
+  "name": "trailpack-graphql-server",
   "version": "0.0.0",
   "description": "Add graphql to a Trail app",
   "homepage": "http://trailsjs.io",
@@ -32,7 +32,8 @@
     "trails": "2.0.2"
   },
   "scripts": {
-    "test": "eslint . && mocha"
+    "test": "eslint . && mocha",
+    "eslint": "eslint --fix ."
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -40,6 +41,6 @@
   "eslintConfig": {
     "extends": "trails"
   },
-  "repository": "https://github.com/LobeTia/trailpack-graphql-middleware.git",
+  "repository": "https://github.com/LobeTia/trailpack-graphql-server.git",
   "license": "MIT"
 }
