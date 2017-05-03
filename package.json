@@ -25,10 +25,17 @@
     "trailpack": "2.1.2"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "eslint": "3.19.0",
     "eslint-config-trails": "3.0.0",
+    "express": "^4.15.2",
     "mocha": "3.3.0",
     "smokesignals": "2.1.0",
+    "sqlite3": "^3.1.8",
+    "trailpack-express": "^2.0.3",
+    "trailpack-router": "^2.1.0",
+    "trailpack-sequelize": "^2.0.0",
     "trails": "2.0.2"
   },
   "scripts": {

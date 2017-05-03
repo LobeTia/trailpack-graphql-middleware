@@ -15,7 +15,7 @@ module.exports = class MiddlewareTrailpack extends Trailpack {
    * TODO document method
    */
   configure() {
-    lib.GraphqlMiddleware.addRoutes(this.app)
+    lib.GraphqlServer.addRoutes(this.app)
   }
 
   /**
